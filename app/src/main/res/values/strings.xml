@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Analisis Numerico</string>
+    <string name="app_name">Numerical Analysis</string>
+
+    <string name="fx">Function f(x)</string>
+    <string name="ffx">First Derivative</string>
+    <string name="fffx">Second Derivative</string>
+    <string name="gx">Function g(x)</string>
+    <string name="xi">Inferiror limit</string>
+    <string name="xs">Superior limit</string>
+    <string name="x0">Initial value</string>
+    <string name="tol">tolerance</string>
+    <string name="iter">Number of iterations</string>
+    <string name="res">Result</string>
+    <string name="send">SEND</string>
+    <string name="del">Delta</string>
+    <string name="sel">Select an option</string>
+
 </resources>
