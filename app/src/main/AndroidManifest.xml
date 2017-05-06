@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BisectionActivity"></activity>
+        <activity android:name=".BisectionActivity" />
+        <activity android:name=".FalseRuleActivity" />
+        <activity android:name=".FixedPointActivity" />
+        <activity android:name=".IncrementalSearchActivity" />
+        <activity android:name=".MultipleRootsActivity" />
+        <activity android:name=".NewtonActivity" />
+        <activity android:name=".SecantActivity"></activity>
     </application>
 
 </manifest>

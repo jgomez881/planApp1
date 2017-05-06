@@ -36,35 +36,34 @@ public class InitActivity extends AppCompatActivity {
                         String value = (String)list_view.getItemAtPosition(position);
                         Intent intent;
                         switch(value){
-                        /*    case "Incremental Search":
-                                intent = new Intent(MasterActivity.this,IncrementalSearchActivity.class);
+                            case "Incremental Search":
+                                intent = new Intent(InitActivity.this,IncrementalSearchActivity.class);
                                 startActivity(intent);
-                                break;*/
+                                break;
                             case "Bisection":
                                 intent = new Intent(InitActivity.this,BisectionActivity.class);
                                 startActivity(intent);
                                 break;
-                        /*    case "False Rule":
-                                intent = new Intent(MasterActivity.this,FalseRuleActivity.class);
+                            case "False Rule":
+                                intent = new Intent(InitActivity.this,FalseRuleActivity.class);
                                 startActivity(intent);
                                 break;
                             case "Fixed Point":
-                                intent = new Intent(MasterActivity.this,FixedPointActivity.class);
+                                intent = new Intent(InitActivity.this,FixedPointActivity.class);
                                 startActivity(intent);
                                 break;
                             case "Newton":
-                                intent = new Intent(MasterActivity.this,NewtonActivity.class);
+                                intent = new Intent(InitActivity.this,NewtonActivity.class);
                                 startActivity(intent);
                                 break;
                             case "Secant":
-                                intent = new Intent(MasterActivity.this,SecantActivity.class);
+                                intent = new Intent(InitActivity.this,SecantActivity.class);
                                 startActivity(intent);
                                 break;
                             case "Multiple Roots":
-                                intent = new Intent(MasterActivity.this,FixedPointActivity.class);
+                                intent = new Intent(InitActivity.this,FixedPointActivity.class);
                                 startActivity(intent);
                                 break;
-                            */
                         }
 
                     }

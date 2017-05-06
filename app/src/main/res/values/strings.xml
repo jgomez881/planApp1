@@ -5,8 +5,8 @@
     <string name="ffx">First Derivative</string>
     <string name="fffx">Second Derivative</string>
     <string name="gx">Function g(x)</string>
-    <string name="xi">Inferiror limit</string>
-    <string name="xs">Superior limit</string>
+    <string name="xi">Inferiror limit or x0 value</string>
+    <string name="xs">Superior limit or x1 value</string>
     <string name="x0">Initial value</string>
     <string name="tol">tolerance</string>
     <string name="iter">Number of iterations</string>
@@ -14,5 +14,12 @@
     <string name="send">SEND</string>
     <string name="del">Delta</string>
     <string name="sel">Select an option</string>
+    <string name="bis">Bisection Method</string>
+    <string name="fals">False Rule Method</string>
+    <string name="fix">Fixed Point Method</string>
+    <string name="inc">Incremental Search Method</string>
+    <string name="mul">Multiple Roots Method</string>
+    <string name="newt">Newton Method</string>
+    <string name="Seca">Secant Method</string>
 
 </resources>

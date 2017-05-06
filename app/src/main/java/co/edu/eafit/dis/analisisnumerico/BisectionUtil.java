@@ -13,7 +13,7 @@ public class BisectionUtil {
         }else if(ys == 0){
             return Double.toString(xs);
         }else if ((yi * ys) > 0){
-            return "Error, There is no root in the interval";
+            return "Error, There is no a root in the interval";
         }else{
             double xm = (xi + xs)/2;
             double ym = ExpressionEvalUtil.function(f,xm);
