@@ -90,19 +90,21 @@
                     Margin="40,0"
                     VerticalOptions="CenterAndExpand">
                     <Button 
-                        BackgroundColor="Navy"
+                        BackgroundColor="#0097A7"
                         BorderRadius="23"
                         Command="{Binding LoginCommand}"
                         HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="Login"
                         HorizontalOptions="FillAndExpand"
                         TextColor="White">
                     </Button>
 
                     <Button 
-                        BackgroundColor="Purple"
+                        BackgroundColor="#0097A7"
                         BorderRadius="23"
                         HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="Register"
                         HorizontalOptions="FillAndExpand"
                         TextColor="White">
