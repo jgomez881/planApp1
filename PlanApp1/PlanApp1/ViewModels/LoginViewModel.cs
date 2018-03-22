@@ -54,9 +54,6 @@
         {
             this.IsRemembered = true;
             this.IsEnabled = true;
-            /*Despues se borra */
-            this.Email = "jkamilogomez5@gmail.com";
-            this.Password = "1234";
         }
         #endregion
 
@@ -101,7 +98,7 @@
                     "Error",
                     "Email or password incorrect.",
                     "Accept");
-                /*this.Password = string.Empty;*/
+                this.Password = string.Empty;
                 return;
             }
             this.IsRunning = false;
