@@ -86,7 +86,7 @@
             this.IsRunning = true;
             this.IsEnabled = false;
 
-            if (this.Email != "jzuluaga55@gmail.com" || this.Password != "1234")
+            if (this.Email != "jkamilogomez5@gmail.com" || this.Password != "1234")
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
