@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   x:Class="PlanApp1.Views.PlansPage"
+     BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Plans">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Plans}"
+            Padding="5">
+            <StackLayout
+                Margin="10,0"
+                Orientation="Vertical"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                Text="Buscador por curso">
+                
+            </Label>
+            <!-- si algo borro esto -->
+                <SearchBar
+                BackgroundColor="Silver"
+                HeightRequest="46"
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="Search"
+                SearchCommand="{Binding SearchCommand}">
+                </SearchBar>
+            </StackLayout>
+
+            <StackLayout
+                Margin="10,0"
+                Orientation="Vertical"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                Text="Buscador por carrera">
+
+                </Label>
+                <!-- si algo borro esto -->
+                <SearchBar
+                BackgroundColor="Silver"
+                HeightRequest="46"
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="Search"
+                SearchCommand="{Binding SearchCommand}">
+                </SearchBar>
+            </StackLayout>
+
+            <StackLayout
+                Margin="10,0"
+                Orientation="Vertical"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                Text="Buscador por Docente">
+
+                </Label>
+                <!-- si algo borro esto -->
+                <SearchBar
+                BackgroundColor="Silver"
+                HeightRequest="46"
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="Search"
+                SearchCommand="{Binding SearchCommand}">
+                </SearchBar>
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

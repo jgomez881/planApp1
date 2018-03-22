@@ -2,12 +2,15 @@
 {
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
+    using Views;
     using Xamarin.Forms;
     /* Hereda de la BaseViewModel*/
     public class LoginViewModel : BaseViewModel
     {
+        /*aqui ponemos a refrescar los campos*/
         #region  Attributes
         private string password;
+        private string email;
         private bool isRunning;
         private bool isEnabled;
         #endregion
@@ -15,8 +18,9 @@
         #region Properties
         public string Email
         {
-            get;
-            set;
+            /*Refresco la View y me la deja en blanco*/
+            get { return this.email; }
+            set { SetValue(ref this.email, value); }
         }
 
 
@@ -50,6 +54,9 @@
         {
             this.IsRemembered = true;
             this.IsEnabled = true;
+            /*Despues se borra */
+            this.Email = "jkamilogomez5@gmail.com";
+            this.Password = "1234";
         }
         #endregion
 
@@ -90,23 +97,22 @@
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
-
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or password incorrect.",
                     "Accept");
-                this.Password = string.Empty;
+                /*this.Password = string.Empty;*/
                 return;
             }
             this.IsRunning = false;
             this.IsEnabled = true;
 
-            await Application.Current.MainPage.DisplayAlert(
-                   "ok",
-                   "coronamos.",
-                   "Accept");
-            return;
+            this.Email = string.Empty;
+            this.Password = string.Empty;
 
+            MainViewModel.GetInstance().Plans= new PlansViewModel();
+
+            await Application.Current.MainPage.Navigation.PushAsync(new PlansPage());
 
         }
         #endregion
