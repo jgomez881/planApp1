@@ -12,25 +12,26 @@
             <StackLayout
                 Margin="10,0"
                 Orientation="Vertical"
-                VerticalOptions="CenterAndExpand">
+                VerticalOptions="Center">
                 <Label
                 Text="Buscador por curso">
-                
-            </Label>
-            <!-- si algo borro esto -->
+
+                </Label>
+                <!-- si algo borro esto -->
                 <SearchBar
-                BackgroundColor="Silver"
+                BackgroundColor="Silver"    
                 HeightRequest="46"
                 Text="{Binding Filter, Mode=TwoWay}"
                 Placeholder="Search"
                 SearchCommand="{Binding SearchCommand}">
                 </SearchBar>
-            </StackLayout>
+                <!-- </StackLayout> -->
 
-            <StackLayout
+
+                <!-- <StackLayout
                 Margin="10,0"
                 Orientation="Vertical"
-                VerticalOptions="CenterAndExpand">
+                VerticalOptions="CenterAndExpand"> -->
                 <Label
                 Text="Buscador por carrera">
 
@@ -43,12 +44,12 @@
                 Placeholder="Search"
                 SearchCommand="{Binding SearchCommand}">
                 </SearchBar>
-            </StackLayout>
+                <!-- </StackLayout>   -->
 
-            <StackLayout
+                <!-- <StackLayout
                 Margin="10,0"
                 Orientation="Vertical"
-                VerticalOptions="CenterAndExpand">
+                VerticalOptions="CenterAndExpand"> -->
                 <Label
                 Text="Buscador por Docente">
 
