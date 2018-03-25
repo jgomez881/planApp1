@@ -4,6 +4,8 @@
     using System.Windows.Input;
     using Views;
     using Xamarin.Forms;
+    using Services;
+    /*si algo borro el usin service y la carpeta y la region service y del constructor*/
     /* Hereda de la BaseViewModel*/
     public class LoginViewModel : BaseViewModel
     {
@@ -13,6 +15,10 @@
         private string email;
         private bool isRunning;
         private bool isEnabled;
+        #endregion
+
+        #region Services
+        DialogService dialogService;
         #endregion
 
         #region Properties
@@ -52,6 +58,7 @@
         #region Constructors
         public LoginViewModel()
         {
+            dialogService = new DialogService();
             this.IsRemembered = true;
             this.IsEnabled = true;
         }
@@ -71,19 +78,25 @@
         {
             if (string.IsNullOrEmpty(this.Email))
             {
-                await Application.Current.MainPage.DisplayAlert(
+
+                await dialogService.ShowMessage("Error", 
+                    "You must enter an Email");
+                /*await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "You must enter an Email",
-                    "Accept");
+                    "Accept");*/
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Password))
             {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an password.",
-                    "Accept");
+
+                await dialogService.ShowMessage("Error",
+                    "You must enter an password");
+                /* await Application.Current.MainPage.DisplayAlert(
+                     "Error",
+                     "You must enter an password.",
+                     "Accept");*/
                 return;
             }
 
