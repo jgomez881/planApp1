@@ -67,6 +67,12 @@
             set;
         }
 
+        public string Address
+        {
+            get;
+            set;
+        }
+
         public string Confirm
         {
             get;
