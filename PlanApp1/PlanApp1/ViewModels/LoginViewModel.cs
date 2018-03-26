@@ -65,6 +65,21 @@
         #endregion
 
         #region Commands
+        public ICommand RegisterNewUserCommand
+        {
+            get
+            {
+                return new RelayCommand(RegisterNewUser);
+            }
+        }
+
+        async void RegisterNewUser()
+        {
+            MainViewModel.GetInstance().NewCustomer = new NewCustomerViewModel();
+            /*await navigationService.NavigateOnLogin("NewCustomerView");*/
+            await Application.Current.MainPage.Navigation.PushAsync(new NewCustomerPage());
+        }
+
         public ICommand LoginCommand
         {
             get
@@ -79,12 +94,14 @@
             if (string.IsNullOrEmpty(this.Email))
             {
 
-                await dialogService.ShowMessage("Error", 
-                    "You must enter an Email");
+                await dialogService.ShowMessage("Error",
+                    "Debes ingresar un correo electrónico");
+                #region OtraForma
                 /*await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an Email",
-                    "Accept");*/
+                "Error",
+                "You must enter an Email",
+                "Accept");*/
+                #endregion
                 return;
             }
 
@@ -92,11 +109,14 @@
             {
 
                 await dialogService.ShowMessage("Error",
-                    "You must enter an password");
+                    "Debes ingresar una contraseña");
+                #region OtraForma
                 /* await Application.Current.MainPage.DisplayAlert(
                      "Error",
                      "You must enter an password.",
                      "Accept");*/
+                #endregion
+
                 return;
             }
 
@@ -107,10 +127,12 @@
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
-                await Application.Current.MainPage.DisplayAlert(
+                await dialogService.ShowMessage("Error",
+                    "Email o contraseña incorrecta.");
+                /*await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or password incorrect.",
-                    "Accept");
+                    "Accept");*/
                 this.Password = string.Empty;
                 return;
             }

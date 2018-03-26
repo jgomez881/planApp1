@@ -13,55 +13,58 @@
                 Margin="10,0"
                 Orientation="Vertical"
                 VerticalOptions="Center">
+
                 <Label
-                Text="Buscador por curso">
-
+                    Text="Buscador por curso">
                 </Label>
-                <!-- si algo borro esto -->
+
                 <SearchBar
-                BackgroundColor="Silver"    
-                HeightRequest="46"
-                Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="Search"
-                SearchCommand="{Binding SearchCommand}">
+                    BackgroundColor="Silver"    
+                    HeightRequest="46"
+                    Text="{Binding Filter, Mode=TwoWay}"
+                    Placeholder="Search"
+                    SearchCommand="{Binding SearchCommand}">
                 </SearchBar>
+                
                 <!-- </StackLayout> -->
-
-
                 <!-- <StackLayout
                 Margin="10,0"
                 Orientation="Vertical"
                 VerticalOptions="CenterAndExpand"> -->
+
                 <Label
-                Text="Buscador por carrera">
+                   Text="Buscador por carrera">
 
                 </Label>
-                <!-- si algo borro esto -->
+
                 <SearchBar
-                BackgroundColor="Silver"
-                HeightRequest="46"
-                Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="Search"
-                SearchCommand="{Binding SearchCommand}">
+                    BackgroundColor="Silver"
+                    HeightRequest="46"
+                    Text="{Binding Filter, Mode=TwoWay}"
+                    Placeholder="Search"
+                    SearchCommand="{Binding SearchCommand}">
                 </SearchBar>
+                
                 <!-- </StackLayout>   -->
 
                 <!-- <StackLayout
                 Margin="10,0"
                 Orientation="Vertical"
                 VerticalOptions="CenterAndExpand"> -->
+
                 <Label
-                Text="Buscador por Docente">
+                    Text="Buscador por Docente">
 
                 </Label>
-                <!-- si algo borro esto -->
+
                 <SearchBar
-                BackgroundColor="Silver"
-                HeightRequest="46"
-                Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="Search"
-                SearchCommand="{Binding SearchCommand}">
+                    BackgroundColor="Silver"
+                    HeightRequest="46"
+                    Text="{Binding Filter, Mode=TwoWay}"
+                    Placeholder="Search"
+                    SearchCommand="{Binding SearchCommand}">
                 </SearchBar>
+                
             </StackLayout>
 
         </StackLayout>
