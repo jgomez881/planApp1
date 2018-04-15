@@ -5,7 +5,6 @@
     using Views;
     using Xamarin.Forms;
     using Services;
-    /*si algo borro el usin service y la carpeta y la region service y del constructor*/
     /* Hereda de la BaseViewModel*/
     public class LoginViewModel : BaseViewModel
     {
@@ -123,16 +122,18 @@
             this.IsRunning = true;
             this.IsEnabled = false;
 
-            if (this.Email != "jkamilogomez5@gmail.com" || this.Password != "1234")
+            if (this.Email != "jgomez88@gmail.com" || this.Password != "1234")
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
                 await dialogService.ShowMessage("Error",
                     "Email o contraseña incorrecta.");
-                /*await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Email or password incorrect.",
-                    "Accept");*/
+                #region otra forma
+                   await Application.Current.MainPage.DisplayAlert(
+                   "Error",
+                   "Email or password incorrect.",
+                   "Accept");
+                #endregion
                 this.Password = string.Empty;
                 return;
             }

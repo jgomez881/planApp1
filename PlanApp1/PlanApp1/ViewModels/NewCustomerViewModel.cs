@@ -67,12 +67,6 @@
             set;
         }
 
-        public string Address
-        {
-            get;
-            set;
-        }
-
         public string Confirm
         {
             get;
@@ -106,7 +100,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a first name.");
+                    "Debes ingresar un nombre.");
                 return;
             }
 
@@ -114,7 +108,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a last name.");
+                    "Debes ingresar un apellido");
                 return;
             }
 
@@ -122,7 +116,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a email.");
+                    "Debes ingresar un correo electrónico.");
                 return;
             }
 
@@ -130,7 +124,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a valid email.");
+                    "Debes ingresar un Email válido.");
                 return;
             }
 
@@ -138,7 +132,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a password.");
+                    "Debes ingresar una contraseña");
                 return;
             }
 
@@ -146,7 +140,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "The password must have at least 6 characters length.");
+                    "La contraseña debe tener al menos 6 caracteres.");
                 return;
             }
 
@@ -154,7 +148,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "You must enter a password confirm.");
+                    "Debe ingresar una contraseña de confirmación");
                 return;
             }
 
@@ -162,7 +156,7 @@
             {
                 await dialogService.ShowMessage(
                     "Error",
-                    "The password and confirm, does not match.");
+                    "La contraseña y confirmacion, no coincide.");
                 return;
             }
 
@@ -172,7 +166,6 @@
 
             var customer = new Customer
             {
-                Address = Address,
                 Email = Email,
                 FirstName = FirstName,
                 LastName = LastName,
