@@ -10,7 +10,6 @@
             BindingContext="{Binding Login}">
             <StackLayout 
             Padding="5">
-
                 <Image
                     Source="logo.png"
                     WidthRequest="190">
@@ -25,9 +24,10 @@
                     </Grid.ColumnDefinitions>
 
                     <Label
+                        FontAttributes="Bold"
                         Grid.Row="0"
                         Grid.Column="0"
-                        Text="E-mail"
+                        Text="E-mail:*"
                         VerticalOptions="Center">
                     </Label>
 
@@ -40,9 +40,10 @@
                     </Entry>
 
                     <Label
+                        FontAttributes="Bold"
                         Grid.Row="1"
                         Grid.Column="0"
-                        Text="contraseña"
+                        Text="Contraseña:*"
                         VerticalOptions="Center">
                     </Label>
 
@@ -90,6 +91,7 @@
                     Margin="40,0"
                     VerticalOptions="CenterAndExpand">
                     <Button 
+                        FontAttributes="Bold"
                         BackgroundColor="#0097A7"
                         BorderRadius="23"
                         Command="{Binding LoginCommand}"
@@ -101,6 +103,7 @@
                     </Button>
 
                     <Button 
+                        FontAttributes="Bold"
                         Command="{Binding RegisterNewUserCommand}"
                         BackgroundColor="#0097A7"
                         BorderRadius="23"

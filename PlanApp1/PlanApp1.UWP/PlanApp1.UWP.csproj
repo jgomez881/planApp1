@@ -109,7 +109,9 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
-    <Content Include="Assets\logo.png" />
+    <Content Include="logo.png" />
+    <Content Include="wall.jpg" />
+    <EmbeddedResource Include="Assets\logo.png" />
     <Content Include="Assets\PackageLogo.scale-100.png" />
     <Content Include="Assets\PackageLogo.scale-125.png" />
     <Content Include="Assets\PackageLogo.scale-150.png" />
