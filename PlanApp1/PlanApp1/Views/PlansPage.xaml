@@ -6,68 +6,26 @@
      BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Plans">
     <ContentPage.Content>
-        <StackLayout
-            BindingContext="{Binding Plans}"
-            Padding="5">
-            <StackLayout
-                Margin="10,0"
-                Orientation="Vertical"
-                VerticalOptions="Center">
-
-                <Label
-                    Text="Buscador por curso">
-                </Label>
-
-                <SearchBar
-                    BackgroundColor="Silver"    
-                    HeightRequest="46"
-                    Text="{Binding Filter, Mode=TwoWay}"
-                    Placeholder="Search"
-                    SearchCommand="{Binding SearchCommand}">
-                </SearchBar>
-                
-                <!-- </StackLayout> -->
-                <!-- <StackLayout
-                Margin="10,0"
-                Orientation="Vertical"
-                VerticalOptions="CenterAndExpand"> -->
-
-                <Label
-                   Text="Buscador por carrera">
-
-                </Label>
-
-                <SearchBar
-                    BackgroundColor="Silver"
-                    HeightRequest="46"
-                    Text="{Binding Filter, Mode=TwoWay}"
-                    Placeholder="Search"
-                    SearchCommand="{Binding SearchCommand}">
-                </SearchBar>
-                
-                <!-- </StackLayout>   -->
-
-                <!-- <StackLayout
-                Margin="10,0"
-                Orientation="Vertical"
-                VerticalOptions="CenterAndExpand"> -->
-
-                <Label
-                    Text="Buscador por Docente">
-
-                </Label>
-
-                <SearchBar
-                    BackgroundColor="Silver"
-                    HeightRequest="46"
-                    Text="{Binding Filter, Mode=TwoWay}"
-                    Placeholder="Search"
-                    SearchCommand="{Binding SearchCommand}">
-                </SearchBar>
-                
-            </StackLayout>
-
-        </StackLayout>
         
+        <ListView x:Name="XamlListViewCatalogoMaterias"
+              ItemsSource="{Binding ObservableCollectionMaterias}"
+              ItemTapped="RedirigirPagina">
+            
+            <ListView.Header>
+                <SearchBar 
+                TextChanged="XamlSearchBarBuscarMateriaTextChanged"
+                Placeholder="Buscar el curso ..."/>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+
     </ContentPage.Content>
 </ContentPage>
