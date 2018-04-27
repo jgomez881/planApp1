@@ -9,7 +9,7 @@
         {
             await Application.Current.MainPage.DisplayAlert(title, 
                 message, 
-                "Accept");
+                "Aceptar");
         }
 	}
 }

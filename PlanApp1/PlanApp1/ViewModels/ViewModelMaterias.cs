@@ -13,14 +13,26 @@ namespace PlanApp1.ViewModels
     {
         public ObservableCollection<Materia> ObservableCollectionMaterias { get; set; }
 
+        public ObservableCollection<Profesor> ObservableCollectionProfesores { get; set; }
+
         public ViewModelMaterias()
         {
             ObservableCollectionMaterias = new ObservableCollection<Materia>(new[]
             {
-                new Materia { Nombre = "Calculo", Vista = typeof(ContentCalculoPage)}, 
-                new Materia { Nombre = "Algebra", Vista = typeof(ContentAlgebraPage)},
-                new Materia { Nombre = "Fisica", Vista =  typeof(ContentAlgebraPage)},
+                new Materia { Nombre = "Calculo III", Vista = typeof(ContentCalculoPage)}, 
+                new Materia { Nombre = "Algebra Lineal", Vista = typeof(ContentAlgebraPage)},
+                new Materia { Nombre = "Fisica I", Vista =  typeof(ContentFisicaPage)},
             });
+
+            ObservableCollectionProfesores = new ObservableCollection<Profesor>(new[]
+           {
+                new Profesor { Nombre = "Javier Espitia", Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Carlos Marin", Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Patricia Gomez",Vista = typeof(ProfesorCalculoPage)},
+            }
+           );
+
+
         }
 
         #region INotifyPropertyChanged Implementation

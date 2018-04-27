@@ -17,10 +17,10 @@
             Materias = new ViewModelMaterias();
             BindingContext = Materias;
         }
-
         /* Agui leo , creo una pagina y redirigo */
         private void RedirigirPagina(object sender, ItemTappedEventArgs e)
         {
+            
             Materia materia = e.Item as Materia;
             if (materia.Vista != null)
             {

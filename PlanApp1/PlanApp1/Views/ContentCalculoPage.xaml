@@ -4,9 +4,26 @@
              x:Class="PlanApp1.Views.ContentCalculoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Lista de Docentes">
+
+            </Label>
+            <ListView x:Name="XamlListViewCatalogoProfesores"
+              ItemsSource="{Binding ObservableCollectionProfesores}"
+              ItemTapped="RedirigirPagina">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nombre}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
