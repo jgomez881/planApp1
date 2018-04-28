@@ -51,7 +51,7 @@
 
                 <Button 
                         FontAttributes="Bold"
-                        Command="{Binding RegisterNewUserCommand}"
+                        Command="{Binding CalificarCommand}"
                         BackgroundColor="#0097A7"
                         BorderRadius="23"
                         HeightRequest="46"
