@@ -8,7 +8,7 @@
                FontSize="50"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
-            <WebView Source="https://help.syncfusion.com/xamarin/sfrating/getting-started"
+            <WebView Source="https://goo.gl/forms/NfW9CSGlvuNVzKG42"
                  VerticalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>

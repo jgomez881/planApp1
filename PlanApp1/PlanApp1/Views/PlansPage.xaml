@@ -16,7 +16,9 @@
 
         <ListView x:Name="XamlListViewCatalogoMaterias"
               ItemsSource="{Binding ObservableCollectionMaterias}"
-              ItemTapped="RedirigirPagina">
+              ItemTapped="RedirigirPagina"
+                  Margin="5">
+            
             
             <ListView.Header>
                 <SearchBar 
