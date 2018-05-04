@@ -17,6 +17,18 @@
             Materias = new ViewModelMaterias();
             BindingContext = Materias;
         }
+
+
+        private void BtnEstadisticas_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentEstadisticasPage());
+        }
+
+        private void BtnComunidad_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentComunidadPage());
+        }
+
         /* Agui leo , creo una pagina y redirigo */
         private void RedirigirPagina(object sender, ItemTappedEventArgs e)
         {

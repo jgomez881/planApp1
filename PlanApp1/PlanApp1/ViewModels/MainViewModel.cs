@@ -1,5 +1,6 @@
 ﻿namespace PlanApp1.ViewModels
 {
+    //MainViewModel hace la conexion con las otras vistas
 	public class MainViewModel
 	{
         #region ViewModels
@@ -20,8 +21,6 @@
             get; 
             set; 
         }
-
-
         #endregion
 
         #region Constructors

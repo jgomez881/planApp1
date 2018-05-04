@@ -26,7 +26,9 @@ namespace PlanApp1.Views
 
         }
 
+
         /* Agui leo , creo una pagina y redirigo */
+        //sender va toda la informacion de la lista
         private void RedirigirPagina(object sender, ItemTappedEventArgs e)
         {
 

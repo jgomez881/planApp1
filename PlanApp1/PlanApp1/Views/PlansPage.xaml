@@ -6,7 +6,9 @@
      BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Plans">
     <ContentPage.Content>
+        
         <StackLayout Padding="5">
+            
             <Label
                 HorizontalOptions="Start"
                 FontAttributes="Bold"
@@ -32,6 +34,35 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+
+            <Button x:Name="BtnComunidad"
+                        Margin="5"
+                        FontAttributes="Bold"
+                        Command="{Binding CalificarCommand}"
+                        Clicked="BtnComunidad_Clicked"
+                        BackgroundColor="#0097A7"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Text="Comunidad"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White">
+            </Button>
+
+            <Button x:Name="BtnEstadisticas"
+                        Margin="5"
+                        FontAttributes="Bold"
+                        Command="{Binding CalificarCommand}"
+                        Clicked="BtnEstadisticas_Clicked"
+                        BackgroundColor="#0097A7"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Text="Estadisticas"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White">
+            </Button>
 
 
         </StackLayout>

@@ -49,9 +49,10 @@
                         TextColor="White">
                 </Button>
 
-                <Button 
+                <Button x:Name="BtnCalificar"
                         FontAttributes="Bold"
                         Command="{Binding CalificarCommand}"
+                        Clicked="BtnCalificar_Clicked"
                         BackgroundColor="#0097A7"
                         BorderRadius="23"
                         HeightRequest="46"

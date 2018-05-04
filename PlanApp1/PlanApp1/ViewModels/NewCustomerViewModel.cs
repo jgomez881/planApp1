@@ -1,6 +1,5 @@
 ﻿namespace PlanApp1.ViewModels
 {
-    using System.ComponentModel;
     using System.Windows.Input;
     using GalaSoft.MvvmLight.Command;
     using Helpers;

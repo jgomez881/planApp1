@@ -15,6 +15,13 @@ namespace PlanApp1.Views
 		public ProfesorCalculoPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            //BtnCalificar.Clicked += BtnCalificar_Clicked;
+
+        }
+       //eventos de lo que va a apasar
+        private void BtnCalificar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentCalificarPage());
+        }
+    }
 }

@@ -6,6 +6,7 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Registrarse">
     <ContentPage.Content>
+        
         <ScrollView
             BindingContext="{Binding NewCustomer}">
             <StackLayout
@@ -23,6 +24,7 @@
                         Text="Nombre:*"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="0"
@@ -37,6 +39,7 @@
                         Text="Apellido:*"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="1"
@@ -51,6 +54,7 @@
                         Text="Email:*"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="2"
@@ -66,6 +70,7 @@
                         Text="Telefono:"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="3"
@@ -81,6 +86,7 @@
                         Text="Contraseña:*"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="4"
@@ -96,6 +102,7 @@
                         Text="Confirmar:*"
                         VerticalOptions="Center">
                     </Label>
+                    
                     <Entry
                         Grid.Column="1"
                         Grid.Row="5"
@@ -103,11 +110,14 @@
                         Placeholder="Ingresa la confirmacion de la contraseña"
                         Text="{Binding Confirm, Mode=TwoWay}">
                     </Entry>
+                    
                 </Grid>
+                
                 <ActivityIndicator
                     IsRunning="{Binding IsRunning, Mode=TwoWay}"
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
+                
                 <Button
                     Command="{Binding SaveCommand}"
                     BackgroundColor="#0097A7"
@@ -120,7 +130,9 @@
                     TextColor="White"
                     VerticalOptions="EndAndExpand">
                 </Button>
+                
             </StackLayout>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

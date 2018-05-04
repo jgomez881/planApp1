@@ -3,6 +3,9 @@
     using System;
     using System.Text.RegularExpressions;
 
+
+    //aqui se creo una expresion regular para validar el email
+
     public static class RegexUtilities
     {
         /*  tiene un solo metodo y lo que hace es validar que si sea un email */
