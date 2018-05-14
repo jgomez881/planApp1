@@ -124,6 +124,36 @@
             this.IsRunning = true;
             this.IsEnabled = false;
 
+            /*string error;
+            MySqlConnector conn = new MySqlConnector(this.Email, this.Password);
+            if(conn.Connect(out error))
+            {
+                this.IsRunning = false;
+                this.IsEnabled = true;
+
+                this.Email = string.Empty;
+                this.Password = string.Empty;
+
+                MainViewModel.GetInstance().Plans = new PlansViewModel();
+
+                await Application.Current.MainPage.Navigation.PushAsync(new PlansPage());
+            }
+            else
+            {
+                this.IsRunning = false;
+                this.IsEnabled = true;
+                await dialogService.ShowMessage("Error",
+                    "Email o contraseña incorrecta.");
+                #region otra forma
+                await Application.Current.MainPage.DisplayAlert(
+                "Error",
+                "Email or password incorrect.",
+                "Accept");
+                #endregion
+                this.Password = string.Empty;
+                return;
+            } */
+
             if (this.Email != "jgomez88@gmail.com" || this.Password != "1234")
             {
                 this.IsRunning = false;
