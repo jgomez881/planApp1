@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PlanApp1.Views.LoginPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    BackgroundImage="fondo4.jpg"
     Title="Login">
     
     <ContentPage.Content>
@@ -14,8 +15,8 @@
             Padding="5">
                 
                 <Image
-                    Source="logo.png"
-                    WidthRequest="190">
+                    Source="logo2.png"
+                    WidthRequest="200">
                 </Image>
 
                 <Grid 
