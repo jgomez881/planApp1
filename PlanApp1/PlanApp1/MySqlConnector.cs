@@ -7,6 +7,7 @@ namespace PlanApp1
 {
     public class MySqlConnector
     {
+
         string usr;
         string pass;
 
