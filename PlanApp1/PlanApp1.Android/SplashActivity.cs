@@ -4,7 +4,7 @@
     using Android.App;
     using Android.OS;
 
-    [Activity(Theme = "@style/Theme.Splash",
+    [Activity(Theme = "@style/MainTheme.Splash",
               MainLauncher = true,
               NoHistory = true)]
     public class SplashActivity : Activity

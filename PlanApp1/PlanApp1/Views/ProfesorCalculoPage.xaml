@@ -1,28 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="PlanApp1.Views.ProfesorCalculoPage">
     <ContentPage.Content>
         <StackLayout Padding="5">
 
-                <Label
-                        FontAttributes="Bold"
+            <Label FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
+            <!-- <rating:SfRating />   -->
+            <rating:SfRating x:Name="rating"  Precision="Standard"  ItemCount="5"  Value="3"/>
+            
+            
+            
+            
+            <Label FontAttributes="Bold" Text="Cursos que dicta:" VerticalOptions="Center"/>
 
-                        Text="Calificacion:"
-                        VerticalOptions="Center">
-                </Label>
-                
-                <Label
-                        FontAttributes="Bold"
-                        Text="Cursos que dicta:"
-                        VerticalOptions="Center">
-                </Label>
 
-                <Label
-                    FontAttributes="Bold"
-                        Text="Comentarios:"
-                        VerticalOptions="Center">
-                </Label>
+            <Label FontAttributes="Bold" Text="Comentarios:" VerticalOptions="Center"></Label>
 
             <Editor
                     Text=""

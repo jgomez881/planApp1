@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.SfRating.XForms.iOS;
 using UIKit;
 
 namespace PlanApp1.iOS
@@ -23,6 +24,8 @@ namespace PlanApp1.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            new SfRatingRenderer();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
