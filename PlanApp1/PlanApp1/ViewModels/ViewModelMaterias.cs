@@ -29,9 +29,9 @@ namespace PlanApp1.ViewModels
                 new Profesor { Nombre = "Javier Espitia", Vista = typeof(ProfesorCalculoPage)},
                 new Profesor { Nombre = "Carlos Marin", Vista = typeof(ProfesorCalculoPage)},
                 new Profesor { Nombre = "Patricia Gomez",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Algebra1 s",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "Algebra2 Gomez s",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "Algebra3 s",Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Pedro Vicente",Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Juan Guillermo",Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Juan Carlos",Vista = typeof(ProfesorAlgebraPage)},
             }
            );
 
