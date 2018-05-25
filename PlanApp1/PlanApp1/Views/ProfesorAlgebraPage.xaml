@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlanApp1.Views.ProfesorAlgebraPage">
+             x:Class="PlanApp1.Views.ProfesorAlgebraPage"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
     <ContentPage.Content>
         <StackLayout>
+            <Label FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
+            <!-- <rating:SfRating />   -->
+            <rating:SfRating x:Name="rating"  Precision="Standard"  ItemCount="5"  Value="3"/>
+            
+            
             <Label Text="Datos Profesor!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

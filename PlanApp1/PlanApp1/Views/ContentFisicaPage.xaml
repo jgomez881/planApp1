@@ -4,9 +4,12 @@
              x:Class="PlanApp1.Views.ContentFisicaPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label 
+            Text="Aqui va la lista de docentes">
+
+
+            </Label>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

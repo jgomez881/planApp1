@@ -19,7 +19,7 @@ namespace PlanApp1
         MySqlConnectionStringBuilder Builder = new MySqlConnectionStringBuilder();
 
         public bool Connect(out string Error) {
-            Builder.Server = "10.131.137.177";
+            Builder.Server = "planapp.mysql.database.azure.com";
             Builder.Database = "PlanApp";
             Builder.UserID = usr;
             Builder.Password = pass;

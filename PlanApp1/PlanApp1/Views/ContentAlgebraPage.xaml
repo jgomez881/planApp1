@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanApp1.Views.ContentAlgebraPage">
     <ContentPage.Content>
+
+        <Label 
+            Text="Aqui va la lista de docentes">
+            
+            
+        </Label>
         
         <!--
         <StackLayout>
