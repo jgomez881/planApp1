@@ -20,7 +20,7 @@ namespace PlanApp1.Views
 		{
 			InitializeComponent ();
 
-            //Profesores = new ViewModelMaterias();
+            Profesores = new ViewModelMaterias();
             BindingContext = Profesores;
 
         }
@@ -28,7 +28,7 @@ namespace PlanApp1.Views
         /* Agui leo , creo una pagina y redirigo */
         //sender va toda la informacion de la lista
         #region Comentado
-        /*private void RedirigirPagina(object sender, ItemTappedEventArgs e)
+        private void RedirigirPagina(object sender, ItemTappedEventArgs e)
         {
 
             Profesor profesor = e.Item as Profesor;
@@ -38,7 +38,7 @@ namespace PlanApp1.Views
                 PageDestino.Title = profesor.Nombre;
                 Navigation.PushAsync(PageDestino);
             }
-        }*/
+        }
         #endregion
         
     }

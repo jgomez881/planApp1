@@ -4,13 +4,8 @@
              x:Class="PlanApp1.Views.ContentAlgebraPage">
     <ContentPage.Content>
 
-        <Label 
-            Text="Aqui va la lista de docentes">
-            
-            
-        </Label>
-        
-        <!--
+
+
         <StackLayout>
             <Label
                 HorizontalOptions="Center"
@@ -20,7 +15,7 @@
 
             </Label>
             <ListView x:Name="XamlListViewCatalogoProfesores"
-              ItemsSource="{Binding ObservableCollectionProfesores}"
+              ItemsSource="{Binding ObservableCollectionAlgebraProfesores}"
               ItemTapped="RedirigirPagina">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -28,8 +23,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
-        -->
-        
+          </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

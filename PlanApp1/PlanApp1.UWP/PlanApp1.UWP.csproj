@@ -109,6 +109,7 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Comunidadph.png" />
     <Content Include="fondo1.jpg" />
     <Content Include="fondo2.jpg" />
     <Content Include="fondo3.jpg" />

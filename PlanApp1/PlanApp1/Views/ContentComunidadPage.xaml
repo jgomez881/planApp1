@@ -1,15 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlanApp1.Views.ContentComunidadPage">
+             x:Class="PlanApp1.Views.ContentComunidadPage"
+             Title="ComunidadEstudiantes">
     <ContentPage.Content>
-        
-        <StackLayout>
-            <Label Text="Comunidad"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="5">
+            
+            <Label
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Comunidad Cucheys">
+
+            </Label>
+            <ListView x:Name="XamlListViewComentarios"
+              ItemsSource="{Binding ObservableCollectionComentarios}"
+                      RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="FillAndExpand">
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="{Binding Mensaje}"/>
+                                <Label
+                                    Text="{Binding FechaFormato}" FontAttributes="Bold"
+                                    HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout  Orientation="Horizontal">
+                        <Entry x:Name="XamlEntryNuevoComentario"
+                               HorizontalOptions="FillAndExpand"
+                               Placeholder="Introduce tu comentario"
+                               />
+                        <Button x:Name="XamlButtonEnviarComentario"
+                                FontAttributes="Bold"
+                                Text="Enviar"
+                                BackgroundColor="#0097A7"
+                                BorderRadius="23"
+                                TextColor="White"
+                                HeightRequest="46"
+                                Clicked="XamlButtonEnviarComentario_Clicked"/>
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
         </StackLayout>
-        
-        
     </ContentPage.Content>
 </ContentPage>

@@ -3,12 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanApp1.Views.ContentFisicaPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label 
-            Text="Aqui va la lista de docentes">
-
+      <StackLayout>
+            <Label
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Lista de Docentes">
 
             </Label>
+            <ListView x:Name="XamlListViewCatalogoProfesores"
+              ItemsSource="{Binding ObservableCollectionFisicaProfesores}"
+              ItemTapped="RedirigirPagina">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nombre}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            
+
+
 
         </StackLayout>
     </ContentPage.Content>
