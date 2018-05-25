@@ -4,15 +4,59 @@
              x:Class="PlanApp1.Views.ProfesorAlgebraPage"
              xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="5">
+
             <Label FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
             <!-- <rating:SfRating />   -->
             <rating:SfRating x:Name="rating"  Precision="Standard"  ItemCount="5"  Value="3"/>
-            
-            
-            <Label Text="Datos Profesor!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+
+
+
+            <Label FontAttributes="Bold" Text="Cursos que dicta:" VerticalOptions="Center"/>
+
+
+            <Label FontAttributes="Bold" Text="Comentarios:" VerticalOptions="Center"></Label>
+
+            <Editor
+                    Text=""
+                    Keyboard="Chat"
+                    HeightRequest="500"
+                    WidthRequest="500"
+                    >
+            </Editor>
+
+
+            <StackLayout
+                    Orientation="Horizontal"
+                    Margin="40,0"
+                    VerticalOptions="CenterAndExpand">
+                <Button 
+                        FontAttributes="Bold"
+                        BackgroundColor="#0097A7"
+                        BorderRadius="23"
+                        Command="{Binding LoginCommand}"
+                        HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Text="Comentar"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White">
+                </Button>
+
+                <Button x:Name="BtnCalificar"
+                        FontAttributes="Bold"
+                        Command="{Binding CalificarCommand}"
+                        Clicked="BtnCalificar_Clicked"
+                        BackgroundColor="#0097A7"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Text="Calificar"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White">
+                </Button>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

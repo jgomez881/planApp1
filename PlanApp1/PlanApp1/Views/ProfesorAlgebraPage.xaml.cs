@@ -16,5 +16,10 @@ namespace PlanApp1.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void BtnCalificar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentCalificarPage());
+        }
+    }
 }
