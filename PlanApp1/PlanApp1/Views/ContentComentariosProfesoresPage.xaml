@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlanApp1.Views.ContentComentariosProfesoresPage"
+             Title="ensayo">
+    
+    <ContentPage.Content>
+        <ListView x:Name="XamlListViewComentarios"
+              ItemsSource="{Binding ObservableCollectionComentariosP}"
+                      RowHeight="50">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="FillAndExpand">
+                            <Label
+                                    FontAttributes="Bold"
+                                    Text="{Binding Mensaje}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

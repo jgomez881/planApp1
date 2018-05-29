@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanApp1.Views.ContentCalificarPage">
     <ContentPage.Content>
-        
+
         <StackLayout>
             <Label Text="WebView"
                FontSize="50"
@@ -12,6 +12,6 @@
             <WebView Source="https://goo.gl/forms/NfW9CSGlvuNVzKG42"
                  VerticalOptions="FillAndExpand" />
         </StackLayout>
-        
+
     </ContentPage.Content>
 </ContentPage>

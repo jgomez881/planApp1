@@ -10,7 +10,7 @@
                 HorizontalOptions="Center"
                 FontAttributes="Bold"
                 FontSize="Large"
-                Text="Comunidad Cucheys">
+                Text="Comunidad PlanApp">
 
             </Label>
             <ListView x:Name="XamlListViewComentarios"

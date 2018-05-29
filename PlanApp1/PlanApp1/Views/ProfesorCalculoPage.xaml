@@ -4,44 +4,65 @@
              xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="PlanApp1.Views.ProfesorCalculoPage">
     <ContentPage.Content>
-        <StackLayout Padding="5">
+        <StackLayout Padding="3">
 
-            <Label FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
+
+            <Label Margin="5" FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
             <!-- <rating:SfRating />   -->
             <rating:SfRating x:Name="rating"  Precision="Standard"  ItemCount="5"  Value="3"/>
             
             
             
             
-            <Label FontAttributes="Bold" Text="Cursos que dicta:" VerticalOptions="Center"/>
+            <Label Margin="5"
+ FontAttributes="Bold" Text="Cursos que dicta:" VerticalOptions="Center"/>
 
 
-            <Label FontAttributes="Bold" Text="Comentarios:" VerticalOptions="Center"></Label>
+            <Label
+                Margin="5"
+                FontAttributes="Bold" Text="Comentarios:" VerticalOptions="Center">
+                
+            </Label>
 
-            <Editor
-                    Text=""
-                    Keyboard="Chat"
-                    HeightRequest="500"
-                    WidthRequest="500"
-                    >
-            </Editor>
-
+            <Entry x:Name="editorComentarioProfesor"
+                    Margin="5"
+                    HorizontalOptions="FillAndExpand"
+                   Placeholder="Introduce tu comentario"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                               />
 
             <StackLayout
                     Orientation="Horizontal"
-                    Margin="40,0"
+                    Margin="30,0"
                     VerticalOptions="CenterAndExpand">
-                <Button 
-                        FontAttributes="Bold"
-                        BackgroundColor="#0097A7"
-                        BorderRadius="23"
-                        Command="{Binding LoginCommand}"
-                        HeightRequest="46"
-                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
-                        Text="Comentar"
-                        HorizontalOptions="FillAndExpand"
-                        TextColor="White">
-                </Button>
+               
+
+                <!--<ListView.Footer>
+                    <StackLayout  Orientation="Horizontal">
+                        <Button x:Name="XamlButtonEnviarComentario"
+                                Command="{Binding ComentarioCommand}"
+                                FontAttributes="Bold"
+                                Text="Comentar"
+                                BackgroundColor="#0097A7"
+                                BorderRadius="23"
+                                TextColor="White"
+                                HeightRequest="46"
+                                Clicked="XamlButtonEnviarComentariopro_Clicked"/>
+                    </StackLayout>
+                </ListView.Footer>
+                -->
+
+                <Button x:Name="XamlButtonEnviarComentario"
+                                Command="{Binding ComentarioCommand}"
+                                FontAttributes="Bold"
+                                Text="Comentar"
+                                BackgroundColor="#0097A7"
+                                BorderRadius="23"
+                                TextColor="White"
+                                HeightRequest="46"
+                                Clicked="XamlButtonEnviarComentariopro_Clicked"
+                                HorizontalOptions="FillAndExpand"/>
 
                 <Button x:Name="BtnCalificar"
                         FontAttributes="Bold"
