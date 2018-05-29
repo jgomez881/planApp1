@@ -11,7 +11,8 @@
             <rating:SfRating x:Name="rating"
                              HorizontalOptions="Start"
                              Precision="Half"  
-                             ItemCount="5"/>
+                             ItemCount="5"
+                             TooltipPlacement="TopLeft"/>
             
             
             

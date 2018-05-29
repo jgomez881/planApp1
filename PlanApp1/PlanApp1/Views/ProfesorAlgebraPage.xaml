@@ -8,7 +8,7 @@
 
             <Label FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
             <!-- <rating:SfRating />   -->
-            <rating:SfRating x:Name="rating"  Precision="Half" ItemCount="5"  />
+            <rating:SfRating x:Name="rating"  Precision="Half" ItemCount="5" TooltipPlacement="TopLeft" />
 
 
 
