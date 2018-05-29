@@ -11,7 +11,6 @@ namespace PlanApp1.Models
             get;
             set;
         }
-
         public Type Vista
         {
             get;
