@@ -12,6 +12,7 @@
 
             </Label>
             <ListView x:Name="XamlListViewCatalogoProfesores"
+                      Margin="5"
               ItemsSource="{Binding ObservableCollectionFisicaProfesores}"
               ItemTapped="RedirigirPagina">
                 <ListView.ItemTemplate>

@@ -12,6 +12,7 @@
 
             </Label>
             <ListView x:Name="XamlListViewCatalogoProfesores"
+                      Margin="5"
               ItemsSource="{Binding ObservableCollectionProfesores}"
               ItemTapped="RedirigirPagina">
                 <ListView.ItemTemplate>
@@ -20,11 +21,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
-            
-
-
-
         </StackLayout>
         
     </ContentPage.Content>

@@ -36,32 +36,29 @@ namespace PlanApp1.ViewModels
                 new Profesor { Nombre = "Pedro Vicente",Vista = typeof(ProfesorCalculoPage)},
                 new Profesor { Nombre = "Juan Guillermo",Vista = typeof(ProfesorCalculoPage)},
                 new Profesor { Nombre = "Juan Carlos",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "ProfesorAlgebra", Vista = typeof(ProfesorAlgebraPage)},
             }
            );
 
             ObservableCollectionFisicaProfesores = new ObservableCollection<Profesor>(new[]
           {
-                new Profesor { Nombre = "Javier Espitia 3", Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Carlos Marin", Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Patricia Gomez",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Pedro Vicente",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Juan Guillermo",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "Juan Carlos",Vista = typeof(ProfesorCalculoPage)},
-                new Profesor { Nombre = "ProfesorAlgebra", Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Javier Espitia", Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Roberto Lorduy", Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Juan David Arboleda",Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Carlos Alberto Avendaño",Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Ricardo Smith",Vista = typeof(ProfesorCalculoPage)},
+                new Profesor { Nombre = "Jorge Ivan Ortiz",Vista = typeof(ProfesorCalculoPage)},
             }
           );
 
 
             ObservableCollectionAlgebraProfesores = new ObservableCollection<Profesor>(new[]
           {
-                new Profesor { Nombre = "Javier Espitia2", Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Jairo Villegas", Vista = typeof(ProfesorAlgebraPage)},
                 new Profesor { Nombre = "Carlos Marin", Vista = typeof(ProfesorAlgebraPage)},
                 new Profesor { Nombre = "Patricia Gomez",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "Pedro Vicente",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "Juan Guillermo",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "Juan Carlos",Vista = typeof(ProfesorAlgebraPage)},
-                new Profesor { Nombre = "ProfesorAlgebra", Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Jorge Ivan Castaño",Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Orlando Garcia",Vista = typeof(ProfesorAlgebraPage)},
+                new Profesor { Nombre = "Gustavo Mejia",Vista = typeof(ProfesorAlgebraPage)},
             }
           );
 

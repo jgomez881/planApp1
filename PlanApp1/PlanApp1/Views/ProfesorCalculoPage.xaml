@@ -6,10 +6,12 @@
     <ContentPage.Content>
         <StackLayout Padding="3">
 
-
-            <Label Margin="5" FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
+                <Label Margin="5" FontAttributes="Bold"  Text="Calificacion:" VerticalOptions="Center"/>
             <!-- <rating:SfRating />   -->
-            <rating:SfRating x:Name="rating"  Precision="Standard"  ItemCount="5"  Value="3"/>
+            <rating:SfRating x:Name="rating"
+                             HorizontalOptions="Start"
+                             Precision="Half"  
+                             ItemCount="5"/>
             
             
             
