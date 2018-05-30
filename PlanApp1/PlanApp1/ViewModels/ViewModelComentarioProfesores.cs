@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PlanApp1.ViewModels
 {
-    class ViewModelComentarioProfesores
+    public class ViewModelComentarioProfesores
     {
         public ObservableCollection<ComentarioPr> ObservableCollectionComentariosP { get; set; }
         public ViewModelComentarioProfesores()

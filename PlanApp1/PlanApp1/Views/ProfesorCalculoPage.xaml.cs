@@ -28,9 +28,10 @@ namespace PlanApp1.Views
         #region Error
         private void XamlButtonEnviarComentariopro_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ContentComentariosProfesoresPage());
+            
             if (!string.IsNullOrEmpty(editorComentarioProfesor.Text))
             {
+                Navigation.PushAsync(new ContentComentariosProfesoresPage(editorComentarioProfesor.Text));
                 ViewModelComentariospro.ObservableCollectionComentariosP.Add
                 (
                     new ComentarioPr()

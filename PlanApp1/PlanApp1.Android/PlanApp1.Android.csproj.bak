@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PlanApp1.Droid</RootNamespace>
     <AssemblyName>PlanApp1.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -52,6 +52,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Share">
+      <Version>7.1.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRating">
       <Version>16.1.0.24</Version>

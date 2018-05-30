@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlanApp1.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,14 @@ namespace PlanApp1.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ContentComentariosProfesoresPage : ContentPage
 	{
-		public ContentComentariosProfesoresPage ()
+        public ViewModelComentarioProfesores ComentarioProfesores;
+
+        public ContentComentariosProfesoresPage (string comentario)
 		{
+            ComentarioProfesores = new ViewModelComentarioProfesores();
+            ComentarioProfesores.ObservableCollectionComentariosP.Add(new Models.ComentarioPr { Mensaje = comentario });
 			InitializeComponent ();
+            BindingContext = ComentarioProfesores;
 		}
 	}
 }

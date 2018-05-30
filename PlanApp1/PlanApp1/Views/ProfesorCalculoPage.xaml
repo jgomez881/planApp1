@@ -37,8 +37,8 @@
 
             <StackLayout
                     Orientation="Horizontal"
-                    Margin="30,0"
-                    VerticalOptions="CenterAndExpand">
+                    Margin="0,15,0,0"
+                    >
                
 
                 <!--<ListView.Footer>

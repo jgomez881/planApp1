@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PlanApp1.Models
 {
-    class ComentarioPr
+    public class ComentarioPr
     {
         public string Mensaje { get; set; }
     }
