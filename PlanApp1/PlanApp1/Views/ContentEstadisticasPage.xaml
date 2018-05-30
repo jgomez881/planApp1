@@ -4,10 +4,23 @@
              x:Class="PlanApp1.Views.ContentEstadisticasPage">
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout Spacing="20">
             <Label Text="Estadisticas"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+
+            <Button Text="Reporte Curso"
+                    FontSize="Medium"
+                    TextColor="White"
+                    BackgroundColor="DarkBlue"
+                    Clicked="OpenBrowser_OnClicked"/>
+
+            <Button Text="Reporte Docente"
+                    FontSize="Medium"
+                    TextColor="White"
+                    BackgroundColor="DarkBlue"
+                    Clicked="OpenBrowser1_OnClicked"/>
+
         </StackLayout>
         
     </ContentPage.Content>
