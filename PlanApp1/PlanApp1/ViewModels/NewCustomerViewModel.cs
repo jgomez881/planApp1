@@ -7,12 +7,15 @@
     using PlanApp1.Views;
     using Services;
     using Xamarin.Forms;
+    using MySql.Data.MySqlClient;
+    using UsuariosMysql.Clases;
 
     public class NewCustomerViewModel : BaseViewModel
     {
+        Conexion conexion = new Conexion();
 
         #region Services
-       /* ApiService apiService;*/
+        /* ApiService apiService;*/
         DialogService dialogService;
         #endregion
 
@@ -94,83 +97,120 @@
 
         async void Save()
         {
-            /*aca validamos que si hallan ingresado*/
-            if (string.IsNullOrEmpty(FirstName))
+            try
             {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debes ingresar un nombre.");
-                return;
+                if (conexion.AbrirConexion() == true)
+                {
+                    /*aca validamos que si hallan ingresado*/
+                    if (string.IsNullOrEmpty(FirstName))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debes ingresar un nombre.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(LastName))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debes ingresar un apellido");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(Email))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debes ingresar un correo electrónico.");
+                        return;
+                    }
+
+                    if (!RegexUtilities.IsValidEmail(Email))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debes ingresar un Email válido.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(Password))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debes ingresar una contraseña");
+                        return;
+                    }
+
+                    if (Password.Length < 6)
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "La contraseña debe tener al menos 6 caracteres.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(Confirm))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "Debe ingresar una contraseña de confirmación");
+                        return;
+                    }
+
+                    if (!Password.Equals(Confirm))
+                    {
+                        await dialogService.ShowMessage(
+                            "Error",
+                            "La contraseña y confirmacion, no coincide.");
+                        return;
+                    }
+
+                    Usuario pUsuario = new Usuario();
+
+                    pUsuario.FirstName = FirstName;
+                    pUsuario.LastName = LastName;
+                    pUsuario.Email = Email;
+                    pUsuario.Phone = Phone;
+                    pUsuario.Password = Password;
+                    pUsuario.Confirm = Confirm;
+
+                    int resultado;
+
+                    resultado = Usuario.AgregarUsuario(conexion.conexion, pUsuario);
+
+                    if (resultado > 0)
+                    {
+                        FirstName = "";
+                        LastName = "";
+                        Email = "";
+                        Phone = "";
+                        Password = "";
+                        Confirm = "";
+
+                    }
+
+                    IsRunning = true;
+                    IsEnabled = false;
+
+                    conexion.CerrarConexion();
+
+                }
+            } catch (MySql.Data.MySqlClient.MySqlException ex) {
+                await dialogService.ShowMessage(ex.Message);
             }
 
-            if (string.IsNullOrEmpty(LastName))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debes ingresar un apellido");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(Email))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debes ingresar un correo electrónico.");
-                return;
-            }
-
-            if (!RegexUtilities.IsValidEmail(Email))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debes ingresar un Email válido.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(Password))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debes ingresar una contraseña");
-                return;
-            }
-
-            if (Password.Length < 6)
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "La contraseña debe tener al menos 6 caracteres.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(Confirm))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "Debe ingresar una contraseña de confirmación");
-                return;
-            }
-
-            if (!Password.Equals(Confirm))
-            {
-                await dialogService.ShowMessage(
-                    "Error",
-                    "La contraseña y confirmacion, no coincide.");
-                return;
-            }
-
-            IsRunning = true;
-            IsEnabled = false;
 
 
-            var customer = new Customer
+
+           /* var customer = new Customer
             {
                 Email = Email,
                 FirstName = FirstName,
                 LastName = LastName,
                 Password = Password,
                 Phone = Phone,
-            };
+            };*/ 
             #region Comentado
             /*var connection = await apiService.CheckConnection();
            if (!connection.IsSuccess)

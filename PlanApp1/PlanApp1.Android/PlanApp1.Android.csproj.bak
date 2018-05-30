@@ -54,7 +54,10 @@
       <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRating">
-      <Version>16.1.0.32</Version>
+      <Version>16.1.0.24</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRating.Android">
+      <Version>16.1.0.24</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
@@ -103,6 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\wall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo2.png" />
+    <AndroidResource Include="Resources\drawable\logo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

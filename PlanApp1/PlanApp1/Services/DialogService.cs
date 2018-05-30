@@ -1,5 +1,6 @@
 ﻿namespace PlanApp1.Services
 {
+    using System;
     using System.Threading.Tasks;
     using Xamarin.Forms;
 
@@ -11,5 +12,10 @@
                 message, 
                 "Aceptar");
         }
-	}
+
+        internal Task ShowMessage(string message)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
